@@ -1,24 +1,27 @@
-export interface IUserData {
-    accountNumber: string;
-    address: string;
-    bankName: string;
-    createdDate: number;
-    currency: string;
-    firstName: string;
-    iban: string;
-    id: string;
-    lastName: string;
-    sortCode: string;
-    state: string;
-}
+export type User = {
+  id: string;
+  createDate: number;
+  firstName: string;
+  lastName: string;
+  state: string;
+  iban: string;
+  bankName: string;
+  sortCode: string;
+  accountNumber: string;
+  address: string;
+  currency: string;
+};
 
-export interface ITrans {
-    accountNumber: string;
-    amount: number;
-    bankName: string;
-    createdDate: number;
-    currency: string;
-    id: string;
-    name: string;
-    state: string;
-}
+export type Transaction = {
+  id: string;
+  currency: string;
+  amount: string;
+  description: string;
+  createdDate: number;
+  state: string;
+};
+
+export type ErrorResponse = {
+  status: string;
+  reason: string;
+};

@@ -1,12 +1,12 @@
-import { useFetchUserData } from "./hooks/useFetchUserData";
-import { useFetchTrans } from "./hooks/useFetchTrans";
-import { CardItem } from "./components/CardItem";
+import { FC } from "react";
+import { CardList } from "./components/cardList";
+import { useGetData } from "./hooks/useGetData";
+import type { User, Transaction } from "./types";
 
-export default function App() {
-  const user = useFetchUserData();
-  const transactions = useFetchTrans();
-  console.log("user", user);
-  console.log("transactions", transactions);
+import "./styles.css";
+
+export const App: FC = () => {
+  const [user] = useGetData<User>("https://awesome-bank.xyz/api/user");
 
   return (
     <div className="App">
@@ -16,9 +16,10 @@ export default function App() {
           Hello, {user.firstName} {user.lastName}!
         </h2>
       )}
-      {transactions && transactions.map((item) => {
-        return <CardItem info={item} key={item.id} />;
-      })}
+      <div className="trans-container">
+        <h3>List of transactions</h3>
+        <CardList />
+      </div>
     </div>
   );
-}
+};

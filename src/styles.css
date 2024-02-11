@@ -1,0 +1,100 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #213547;
+  background-color: #ffffff;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #1a8876;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #1a8876;
+}
+
+body {
+  margin: 0;
+  background-color: #e2e2e2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #f1887a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #1a8876;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.App {
+  margin: 1em;
+}
+
+.trans-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  background-color: white;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.card-meta {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.card-meta--amount {
+  display: flex;
+  flex-direction: row;
+  gap: 0.2rem;
+}
